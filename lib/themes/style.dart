@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../utils/constants/app-color-scheme.dart';
 
 ThemeData appTheme() {
   return ThemeData(
@@ -20,8 +19,8 @@ ThemeData appTheme() {
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
-          foregroundColor: Color.fromRGBO(246, 246, 246, 1),
-          backgroundColor: Color.fromRGBO(47, 114, 145, 1)),
+          foregroundColor: const Color.fromRGBO(246, 246, 246, 1),
+          backgroundColor: const Color.fromRGBO(47, 114, 145, 1)),
     ),
   );
 }

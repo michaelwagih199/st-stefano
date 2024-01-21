@@ -6,7 +6,7 @@ import '../../components/decoration-utils.dart';
 
 class HomeScreen extends StatefulWidget {
   final String title;
-  const HomeScreen({Key? key, required this.title}) : super(key: key);
+  const HomeScreen({super.key, required this.title});
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
           decoration: backGroundPattern(),
           child: BlocBuilder<HomeBloc, HomeState>(
             builder: (context, state) {
-              return Column(
+              return const Column(
                 children: [],
               );
             },

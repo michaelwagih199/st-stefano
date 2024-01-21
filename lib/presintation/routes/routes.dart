@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:st_stefano_quiz_game/presintation/screens/splash/bloc/splash_bloc.dart';
@@ -17,7 +16,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => SplashBloc(),
-            child: SplashScreen(title: HOME_SCREEN_TITLE),
+            child: const SplashScreen(title: HOME_SCREEN_TITLE),
           ),
         );
 
@@ -25,7 +24,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => HomeBloc(),
-            child: HomeScreen(title: HOME_SCREEN_TITLE),
+            child: const HomeScreen(title: HOME_SCREEN_TITLE),
           ),
         );
 

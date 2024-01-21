@@ -5,7 +5,7 @@ import 'bloc/admin_bloc.dart';
 
 class AdminScreen extends StatefulWidget {
   final String title;
-  const AdminScreen({Key? key, required this.title}) : super(key: key);
+  const AdminScreen({super.key, required this.title});
   @override
   State<AdminScreen> createState() => _AdminScreenState();
 }
@@ -30,7 +30,7 @@ class _AdminScreenState extends State<AdminScreen> {
           decoration: backGroundPattern(),
           child: BlocBuilder<AdminBloc, AdminState>(
             builder: (context, state) {
-              return Column(
+              return const Column(
                 children: [],
               );
             },

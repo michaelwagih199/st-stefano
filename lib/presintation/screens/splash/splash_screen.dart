@@ -7,7 +7,7 @@ import 'bloc/splash_bloc.dart';
 
 class SplashScreen extends StatefulWidget {
   final String title;
-  const SplashScreen({Key? key, required this.title}) : super(key: key);
+  const SplashScreen({super.key, required this.title});
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
           decoration: backGroundPattern(),
           child: BlocBuilder<SplashBloc, SplashState>(
             builder: (context, state) {
-              return Column(
+              return const Column(
                 children: [],
               );
             },
