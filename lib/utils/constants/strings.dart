@@ -4,8 +4,9 @@ const LOGIN_ROUTE = "/login";
 const ADMIN_ROUTE = "/admin";
 const SPLSH_ROUTE = "/";
 
-// images asset
-const IMAGE_BACK_PATTERN = "assets/images/bg_1.png";
+//App Font
+const APP_FONT = 'LalezarRegular';
+const Coptic_FONT = 'Athanasius';
 
 //app strings
 const BTN_UPDATE_DATA = 'تحديث البيانات';
