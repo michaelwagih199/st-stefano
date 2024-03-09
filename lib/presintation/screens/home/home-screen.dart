@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:st_stefano_quiz_game/presintation/components/app-widget.dart';
 import 'package:st_stefano_quiz_game/presintation/screens/home/bloc/home_bloc.dart';
@@ -31,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 return Column(
                   children: [
                     Flexible(
-                      flex: 1,
+                      flex: 2,
                       fit: FlexFit.tight,
                       child: Stack(
                         fit: StackFit.expand,
@@ -61,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       margin: const EdgeInsets.only(left: 8.0),
                                       child: AppCopticTextWidget(
                                         color: Colors.white,
-                                        fontSize: 25,
+                                        fontSize: 22,
                                         textAlign: TextAlign.center,
                                         fontWeight: FontWeight.normal,
                                         text: AppStrings
@@ -90,23 +91,96 @@ class _HomeScreenState extends State<HomeScreen> {
                       ), //Container
                     ),
                     Flexible(
-                      flex: 2,
+                      flex: 3,
                       fit: FlexFit.tight,
                       child: Container(
-                        margin: const EdgeInsets.fromLTRB(20, 8, 20, 8),
-                        child: Column(
+                        margin: const EdgeInsets.fromLTRB(20, 30, 20, 20),
+                        child: const Column(
                           children: [
-                            AppCopticTextWidget(
-                              color: Color(AppColorsEnum.primaryAmber.colorCode),
-                              fontSize: 40,
-                              textAlign: TextAlign.center,
-                              fontWeight: FontWeight.bold,
-                              text: AppStrings.homeScreenCopticText.text,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                  child: AppCardWidget(),
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Expanded(
+                                  child: AppCardWidget(),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Expanded(
+                                  child: AppCardWidget(),
+                                ),
+                                SizedBox(
+                                  width: 30,
+                                ),
+                                Expanded(
+                                  child: AppCardWidget(),
+                                )
+                              ],
                             ),
                           ],
                         ),
-                      ), //Container
-                    ), //Flexib//Flexible
+                      ),
+                    ),
+                    Flexible(
+                      flex: 1,
+                      fit: FlexFit.tight,
+                      child: Container(
+                        margin: const EdgeInsets.fromLTRB(30, 0, 30, 10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Expanded(
+                              flex: 2,
+                              child: Container(
+                                alignment: Alignment.bottomRight,
+                                child: AppTextWidget(
+                                  color:
+                                      Color(AppColorsEnum.slateGray.colorCode),
+                                  fontSize: 16,
+                                  textAlign: TextAlign.start,
+                                  fontWeight: FontWeight.normal,
+                                  text:
+                                      AppStrings.homeScreenLabelDailyVerse.text,
+                                ),
+                              ),
+                            ),
+                            Expanded(
+                              child: Divider(
+                                color: Color(AppColorsEnum.silver.colorCode),
+                                thickness: 1,
+                              ),
+                            ),
+                            Expanded(
+                              flex: 3,
+                              child: Container(
+                                alignment: Alignment.topRight,
+                                child: AppTextWidget(
+                                  color: Color(
+                                      AppColorsEnum.primaryAmber.colorCode),
+                                  fontSize: 14,
+                                  textAlign: TextAlign.end,
+                                  fontWeight: FontWeight.normal,
+                                  text: AppStrings.homeScreenExDailyVerse.text,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 );
               },

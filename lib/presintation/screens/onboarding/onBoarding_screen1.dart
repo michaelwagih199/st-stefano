@@ -25,79 +25,67 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
-        child: BlocListener<OnboardingBloc, SplashState>(
-          listener: (context, state) {
-            // TODO: implement listener
-          },
-          child: Container(
-            color: Color(AppColorsEnum.offWhite.colorCode),
-            width: screenWidth,
-            child: BlocBuilder<OnboardingBloc, SplashState>(
-              builder: (context, state) {
-                return Column(
-                  children: [
-                    Container(
+        child: Container(
+          color: Color(AppColorsEnum.offWhite.colorCode),
+          width: screenWidth,
+          child: BlocBuilder<OnboardingBloc, SplashState>(
+            builder: (context, state) {
+              return Column(
+                children: [
+                  Flexible(
+                    flex: 5,
+                    fit: FlexFit.tight,
+                    child: Container(
+                      margin: const EdgeInsets.fromLTRB(0, 50, 0, 0),
+                      padding: const EdgeInsets.only(top: 20),
                       color: Colors.white,
-                      child: Container(
-                        margin: const EdgeInsets.fromLTRB(8, 16, 8, 0),
-                        padding: const EdgeInsets.fromLTRB(0, 8, 0, 8),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Expanded(
-                                    child: Image.asset(
-                                  AppImagesEnums.begoryLogo.img,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                  child: Image.asset(
+                                AppImagesEnums.begoryLogo.img,
+                                height: 100,
+                                width: 100,
+                              )),
+                              Expanded(
+                                child: Image.asset(
+                                  AppImagesEnums.shamamsaLogo.img,
                                   height: 100,
                                   width: 100,
-                                )),
-                                Expanded(
-                                  child: Image.asset(
-                                    AppImagesEnums.shamamsaLogo.img,
-                                    height: 100,
-                                    width: 100,
-                                    fit: BoxFit.contain,
-                                  ),
+                                  fit: BoxFit.contain,
                                 ),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            AppTextWidget(
-                              color: Color(AppColorsEnum.primaryBlue.colorCode),
-                              fontSize: 22,
-                              textAlign: TextAlign.center,
-                              fontWeight: FontWeight.normal,
-                              text: AppStrings.txtScreenOnboarding1Begin.text,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Image.asset(
-                              AppImagesEnums.onbarding1.img,
-                              height: 300,
-                              width: 300,
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            AppTextWidget(
-                              color:
-                                  Color(AppColorsEnum.primaryAmber.colorCode),
-                              fontSize: 22,
-                              textAlign: TextAlign.center,
-                              fontWeight: FontWeight.normal,
-                              text: AppStrings.txtScreenOnboarding1Last.text,
-                            ),
-                          ],
-                        ),
+                              ),
+                            ],
+                          ),
+                          AppTextWidget(
+                            color: Color(AppColorsEnum.primaryBlue.colorCode),
+                            fontSize: 22,
+                            textAlign: TextAlign.center,
+                            fontWeight: FontWeight.normal,
+                            text: AppStrings.txtScreenOnboarding1Begin.text,
+                          ),
+                          Image.asset(
+                            AppImagesEnums.onbarding1.img,
+                            height: 300,
+                            width: 300,
+                          ),
+                          AppTextWidget(
+                            color: Color(AppColorsEnum.primaryAmber.colorCode),
+                            fontSize: 25,
+                            textAlign: TextAlign.center,
+                            fontWeight: FontWeight.normal,
+                            text: AppStrings.txtScreenOnboarding1Last.text,
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    Row(
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       // crossAxisAlignment: CrossAxisAlignment.baseline,
                       children: [
@@ -156,10 +144,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                       ],
                     ),
-                  ],
-                );
-              },
-            ),
+                  ),
+                ],
+              );
+            },
           ),
         ),
       ),

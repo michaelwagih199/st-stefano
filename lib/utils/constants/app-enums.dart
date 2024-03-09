@@ -22,6 +22,8 @@ enum AppStrings {
   txtScreenOnboarding3Last("احنا سامعينك عشان رأيك مهم"),
   homeScreenCopticText(";na]enak ma`tcaboi"),
   homeScreenArabicText("أسالك فتعلمنى"),
+  homeScreenLabelDailyVerse("اية اليوم"),
+  homeScreenExDailyVerse("هَا أَنَا آتِي سَرِيعًا. تَمَسَّكْ بِمَا عِنْدَكَ لِئَلاَّ يَأْخُذَ أَحَدٌ إِكْلِيلَكَ. (رؤ 3: 11)"),
   ;
 
   final String text;
