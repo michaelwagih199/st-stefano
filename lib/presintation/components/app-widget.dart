@@ -68,33 +68,39 @@ class AppCopticTextWidget extends StatelessWidget {
 class AppCardWidget extends StatelessWidget {
   final String text;
   final String imagePath;
-  
+  final BoxFit boxFit;
+  final VoidCallback callback;
   const AppCardWidget({
     super.key,
+    required this.text,
+    required this.imagePath,
+    required this.callback,
+    required this.boxFit,
   });
 
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      Container(
-        height: 150,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AppImagesEnums.homeHero.img),
-            fit: BoxFit.cover,
-          ),
-          borderRadius: BorderRadius.circular(4),
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black,
-              offset: Offset(
-                2.0,
-                2.0,
-              ),
-              blurRadius: 5.0,
-              spreadRadius: 1.0,
+      GestureDetector(
+        onTap: callback,
+        child: Container(
+          height: 150,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            image: DecorationImage(
+              image: AssetImage(imagePath),
+              fit: boxFit,
             ),
-          ],
+            borderRadius: BorderRadius.circular(4),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 2,
+                blurRadius: 3,
+                offset: const Offset(0, 1), // changes position of shadow
+              ),
+            ],
+          ),
         ),
       ),
       Positioned(
@@ -102,19 +108,20 @@ class AppCardWidget extends StatelessWidget {
         right: 0,
         left: 0,
         child: Container(
+          padding: EdgeInsets.all(4),
           decoration: BoxDecoration(
-            color: Color(AppColorsEnum.silver.colorCode),
+            color: Color(AppColorsEnum.paleGray.colorCode),
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(4),
               bottomRight: Radius.circular(4),
             ),
           ),
           child: AppTextWidget(
-            color: Colors.white,
-            fontSize: 22,
+            color: Color(AppColorsEnum.slateGray.colorCode),
+            fontSize: 20,
             textAlign: TextAlign.center,
             fontWeight: FontWeight.normal,
-            text: AppStrings.homeScreenArabicText.text,
+            text: text,
           ),
         ),
       ),

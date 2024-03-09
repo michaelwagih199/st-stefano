@@ -95,36 +95,73 @@ class _HomeScreenState extends State<HomeScreen> {
                       fit: FlexFit.tight,
                       child: Container(
                         margin: const EdgeInsets.fromLTRB(20, 30, 20, 20),
-                        child: const Column(
+                        child: Column(
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Expanded(
-                                  child: AppCardWidget(),
+                                  child: AppCardWidget(
+                                    callback: () {
+                                      print("Clicked");
+                                    },
+                                    text: AppStrings
+                                        .homeScreenLabelMadrsetBigoryCard.text,
+                                    imagePath:
+                                        AppImagesEnums.madrestBegoryCard.img,
+                                    boxFit: BoxFit.scaleDown,
+                                  ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 30,
                                 ),
                                 Expanded(
-                                  child: AppCardWidget(),
+                                  child: AppCardWidget(
+                                    callback: () {
+                                      print("Clicked");
+                                    },
+                                    text: AppStrings
+                                        .homeScreenLabelMadrsetElShmamsaCard
+                                        .text,
+                                    imagePath:
+                                        AppImagesEnums.madersetShmamsaCard.img,
+                                    boxFit: BoxFit.scaleDown,
+                                  ),
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 30,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Expanded(
-                                  child: AppCardWidget(),
+                                  child: AppCardWidget(
+                                    callback: () {
+                                      print("Clicked");
+                                    },
+                                    text: AppStrings
+                                        .homeScreenLabelra2yakMohmCard.text,
+                                    imagePath:
+                                        AppImagesEnums.ra2yakMohmCard.img,
+                                    boxFit: BoxFit.cover,
+                                  ),
                                 ),
                                 SizedBox(
                                   width: 30,
                                 ),
                                 Expanded(
-                                  child: AppCardWidget(),
+                                  child: AppCardWidget(
+                                    callback: () {
+                                      print("Clicked");
+                                    },
+                                    text: AppStrings
+                                        .homeScreenLabelTamaskBma3ndakCard.text,
+                                    imagePath:
+                                        AppImagesEnums.tamaskBma3endakCard.img,
+                                    boxFit: BoxFit.cover,
+                                  ),
                                 )
                               ],
                             ),
