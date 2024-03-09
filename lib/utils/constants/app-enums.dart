@@ -5,6 +5,10 @@ enum AppImagesEnums {
   onbarding2("assets/images/onbarding2.png"),
   onbarding3("assets/images/onbarding3.png"),
   homeHero("assets/images/homeImage.png"),
+  madersetShmamsaCard("assets/images/madersetShmamsaCard.png"),
+  madrestBegoryCard("assets/images/madrestBegoryCard.png"),
+  ra2yakMohmCard("assets/images/ra2yakMohmCard.png"),
+  tamaskBma3endakCard("assets/images/tamaskBma3endakCard.png"),
   ;
 
   final String img;
@@ -23,7 +27,12 @@ enum AppStrings {
   homeScreenCopticText(";na]enak ma`tcaboi"),
   homeScreenArabicText("أسالك فتعلمنى"),
   homeScreenLabelDailyVerse("اية اليوم"),
-  homeScreenExDailyVerse("هَا أَنَا آتِي سَرِيعًا. تَمَسَّكْ بِمَا عِنْدَكَ لِئَلاَّ يَأْخُذَ أَحَدٌ إِكْلِيلَكَ. (رؤ 3: 11)"),
+  homeScreenExDailyVerse(
+      "هَا أَنَا آتِي سَرِيعًا. تَمَسَّكْ بِمَا عِنْدَكَ لِئَلاَّ يَأْخُذَ أَحَدٌ إِكْلِيلَكَ. (رؤ 3: 11)"),
+  homeScreenLabelMadrsetElShmamsaCard("مدرسة الشمامسة"),
+  homeScreenLabelMadrsetBigoryCard("مدرسة بي جورى"),
+  homeScreenLabelTamaskBma3ndakCard("تمسك بما عندك"),
+  homeScreenLabelra2yakMohmCard("رأيك مهم"),
   ;
 
   final String text;
